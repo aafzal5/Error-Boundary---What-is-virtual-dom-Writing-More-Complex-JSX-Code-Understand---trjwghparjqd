@@ -4,7 +4,14 @@ import Component from "./Component";
 import ErrorBoundary from "./ErrorBoundary";
 const App = () => {
 
+let setFunc;
+const changeFunc = (func)=>{
+  setFunc = func;
+};
 
+const errorGenerator = ()=> {
+  setFunc(true);
+};
   return (
 
     <div id="main">
